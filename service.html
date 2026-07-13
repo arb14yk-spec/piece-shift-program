@@ -238,6 +238,29 @@
     font-weight: 600;
     margin-right: 4px;
   }
+  .price-chip{
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    border-color: var(--gold);
+  }
+  .price-chip s{
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration-color: var(--muted);
+  }
+  .price-chip strong{
+    color: var(--gold-bright);
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 0;
+  }
+  .offer-note{
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
 
   /* ========================================================
      Buttons
@@ -600,6 +623,23 @@
     color: var(--gold-bright);
     font-weight: 700;
   }
+  .overview dd.price .price-original{
+    display: block;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .overview dd.price .price-sub{
+    display: block;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+  }
 
   /* ========================================================
      Final CTA section
@@ -713,8 +753,9 @@
 
   <div class="meta-row">
     <span class="meta-chip"><strong>120</strong>分</span>
-    <span class="meta-chip"><strong>15,000</strong>円（税込）</span>
+    <span class="meta-chip price-chip"><s>15,000円</s><strong>無料</strong></span>
   </div>
+  <p class="offer-note">モニター期間限定・先着20名</p>
 
   <a class="btn btn-primary" id="cta-hero" href="#" target="_blank" rel="noopener">LINEで「体験希望」と送る</a>
   </div>
@@ -947,7 +988,10 @@
         </div>
         <div class="row">
           <dt>料金</dt>
-          <dd class="price">15,000円（税込）</dd>
+          <dd class="price">
+            <s class="price-original">15,000円（税込）</s>
+            無料<span class="price-sub">（モニター期間限定・先着20名）</span>
+          </dd>
         </div>
         <div class="row">
           <dt>実施方法</dt>
